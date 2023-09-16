@@ -15,7 +15,7 @@ import java.util.List;
 @ApplicationScoped
 public class LivroService implements ILivroService {
 
-    private LivroBancoDAO livroListDao;
+    private ILivroDao livroListDao;
 
     @Inject
     public LivroService(@Named("livroBancoDAO") LivroBancoDAO livroBancoDAO){
