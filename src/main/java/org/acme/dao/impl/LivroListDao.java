@@ -20,9 +20,9 @@ public class LivroListDao implements ILivroDao {
     }
 
 
-    public Uni<Void> salvar(Livro livro){
+    public Uni<Livro> salvar(Livro livro){
         livros.add(livro);
-        return Uni.createFrom().voidItem();
+        return Uni.createFrom().item(livro);
     }
 
     public Uni<List<Livro>> listarTodos(){

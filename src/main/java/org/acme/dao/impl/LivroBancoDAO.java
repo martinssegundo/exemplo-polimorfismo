@@ -13,8 +13,8 @@ import java.util.List;
 @Named("livroBancoDAO")
 public class LivroBancoDAO implements ILivroDao {
     @Override
-    public Uni<Void> salvar(Livro livro) {
-        return livro.persist().replaceWithVoid();
+    public Uni<Livro> salvar(Livro livro) {
+        return livro.persistAndFlush();
     }
 
     @Override

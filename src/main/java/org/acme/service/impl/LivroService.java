@@ -22,8 +22,7 @@ public class LivroService implements ILivroService {
         this.livroListDao = livroBancoDAO;
     }
 
-    @WithSession
-    public Uni<Void> salvarLivro(Livro livro) {
+    public Uni<Livro> salvarLivro(Livro livro) {
         return livroListDao.salvar(livro);
     }
 

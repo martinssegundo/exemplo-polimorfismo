@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ILivroDao {
 
-    Uni<Void> salvar(Livro livro);
+    Uni<Livro> salvar(Livro livro);
 
     Uni<List<Livro>> listarTodos();
 }
